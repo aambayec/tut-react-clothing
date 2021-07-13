@@ -1,5 +1,11 @@
 # TUT-REACT-CLOTHING
 
+## Start App
+
+```shell
+yarn start
+```
+
 ## SASS
 
 Check [Node version support policy](https://www.npmjs.com/package/node-sass)
@@ -31,4 +37,26 @@ npm update -D
 npm audit fix
 # then
 npm install
+```
+
+## React Router DOM
+
+Installation
+
+```shell
+yarn add react-router-dom
+```
+
+`withRouter` is a Higher Order Component (HOC) - a function that takes a component and returns a new component. It adds the routing related props to the new component.
+
+
+
+## Troubleshooting Package Dependencies
+
+E.g One package requires a specific version of babel-jest, add "resolutions" in `package.json`.
+
+```json
+"resolutions": {
+    "babel-jest": "24.7.1", 
+}
 ```
