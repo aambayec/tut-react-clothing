@@ -12,3 +12,23 @@ nvm version
 
 yarn add node-sass # or yarn add node-sass@4.14.1
 ```
+
+## Updating Packages + Latest Version of React
+
+### Using Yarn
+
+```shell
+yarn upgrade
+```
+
+## Using NPM
+
+```shell
+# Update all of the dependencies
+npm update -D 
+
+# If you see some vulnerabilities run:
+npm audit fix
+# then
+npm install
+```
