@@ -75,3 +75,9 @@ E.g One package requires a specific version of babel-jest, add "resolutions" in 
     ```
 
 6. See code implementations in `src/firebase`.
+
+## Redux
+
+```shell
+yarn add redux redux-logger react-redux
+```
