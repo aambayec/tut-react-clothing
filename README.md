@@ -67,7 +67,7 @@ E.g One package requires a specific version of babel-jest, add "resolutions" in 
 1. Create new project in firebase.
 2. Create new `</> web platform` in your firebase project.
 3. Take note of the SDK firebase config.
-4. Add `Authentication` with `google sign in provider`.
+4. Add `Authentication` with `google sign in provider` and `Email/Password`.
 5. Install firebase in your project source code.
 
     ```shell
