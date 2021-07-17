@@ -81,3 +81,9 @@ E.g One package requires a specific version of babel-jest, add "resolutions" in 
 ```shell
 yarn add redux redux-logger react-redux
 ```
+
+## Reselect / Memoization
+
+```shell
+yarn add reselect
+```
