@@ -120,3 +120,6 @@ Project Setup
 heroku create aambayec-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
 git push heroku main
 ```
+
+Linking Github to Heroku
+<https://devcenter.heroku.com/articles/github-integration>
