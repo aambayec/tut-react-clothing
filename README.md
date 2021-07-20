@@ -1,4 +1,5 @@
 # TUT-REACT-CLOTHING
+See live at <https://aambayec-clothing.herokuapp.com>
 
 ## Start App
 
@@ -100,5 +101,22 @@ yarn add react-stripe-checkout
 
 Test credit card for payments:
 NO: 4242 4242 4242 4242
-EXP: 10/21
+EXP: 10/29
 CW: 123
+
+## Deploying in [Heroku](https://dashboard.heroku.com/)
+
+Installing Heroku and Login
+
+```shell
+curl https://cli-assets.heroku.com/install.sh | sh
+heroku --version
+heroku login
+```
+
+Project Setup
+
+```shell
+heroku create aambayec-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
+git push heroku main
+```
