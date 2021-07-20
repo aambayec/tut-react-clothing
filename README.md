@@ -123,3 +123,10 @@ git push heroku main
 
 Linking Github to Heroku
 <https://devcenter.heroku.com/articles/github-integration>
+
+
+## Styled Components
+
+```shell
+yarn add styled-components
+```
