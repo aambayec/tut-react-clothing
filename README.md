@@ -91,3 +91,14 @@ yarn add reselect
 # memoize helper function
 yarn add lodash.memoize
 ```
+
+## Stripe Checkout
+
+```shell
+yarn add react-stripe-checkout
+```
+
+Test credit card for payments:
+NO: 4242 4242 4242 4242
+EXP: 10/21
+CW: 123
