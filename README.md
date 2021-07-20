@@ -87,4 +87,7 @@ yarn add redux-persist
 
 ```shell
 yarn add reselect
+
+# memoize helper function
+yarn add lodash.memoize
 ```
