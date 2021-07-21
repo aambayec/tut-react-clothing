@@ -7,6 +7,7 @@ import cartReducer from "./cart/cart.reducer";
 import directoryReducer from "./directory/directory.reducer";
 import shopReducer from "./shop/shop.reducer";
 
+// works like localstorage, only the reducers in whitelist
 const persistConfig = {
   key: "root",
   storage,
