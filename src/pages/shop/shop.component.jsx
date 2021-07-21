@@ -18,6 +18,7 @@ class ShopPage extends React.Component {
     loading: true,
   };
 
+  // ************ OBSERVABLE VERSION ******************
   unsubscribeFromSnapShot = null;
 
   componentDidMount() {
@@ -32,6 +33,30 @@ class ShopPage extends React.Component {
       }
     );
   }
+
+  componentWillUnmount() {
+    this.unsubscribeFromSnapShot();
+  }
+  // ************ END OBSERVABLE VERSION ***************
+
+  // PROMISE VERISON
+  // componentDidMount() {
+  //   const collectionRef = firestore.collection("collections");
+  //   const { updateCollections } = this.props;
+
+  //   // sample way for fetch
+  //   // fetch(
+  //   //   "https://firestore.googleapis.com/v1/projects/tut-react-clothing/databases/(default)/documents/collections"
+  //   // )
+  //   //   .then((response) => response.json())
+  //   //   .then((collections) => console.log(collections));
+
+  //   collectionRef.get().then((snapshot) => {
+  //     const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+  //     updateCollections(collectionsMap);
+  //     this.setState({ loading: false });
+  //   });
+  // }
 
   render() {
     const { match } = this.props;
