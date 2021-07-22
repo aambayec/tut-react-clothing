@@ -4,6 +4,7 @@ import {
   put,
   takeLatest,
   delay,
+  all,
 } from "redux-saga/effects";
 import {
   firestore,
@@ -38,7 +39,7 @@ function* fetchCollectionsAsync() {
   }
 }
 
-export function* fetchCollectionsStart() {
+function* fetchCollectionsStart() {
   yield takeLatest(
     ShopActionTypes.FETCH_COLLECTIONS_START,
     fetchCollectionsAsync
@@ -58,4 +59,8 @@ function* sampleDebounce() {
 export function* sampleDebounceSaga() {
   //reducer action type
   yield takeLatest("REDUCER_ACTION_TYPE_HERE1", sampleDebounce);
+}
+
+export function* shopSagas() {
+  yield all([call(fetchCollectionsStart)]);
 }
