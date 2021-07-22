@@ -1,11 +1,22 @@
 # TUT-REACT-CLOTHING
+
 See live at <https://aambayec-clothing.herokuapp.com>
 
 ## Start App
 
+Client (only)
+
 ```shell
+cd client
 yarn
 yarn start
+```
+
+Client and Backend
+
+```shell
+npm i -g nodemon
+yarn dev
 ```
 
 ## SASS
@@ -126,6 +137,24 @@ git push heroku main
 Linking Github to Heroku
 <https://devcenter.heroku.com/articles/github-integration>
 
+Relinking a Heroku Git Project
+
+```shell
+# Get your app name here
+heroku apps
+
+# Setup git remote
+heroku git:remote -a <heroku-app-name>
+```
+
+Get/Remove Heroku buildpacks
+
+```shell
+# get
+heroku buildpacks
+#remove
+heroku buildpacks:remove https://github.com/mars/create-react-app-buildpack.git
+```
 
 ## Styled Components
 
