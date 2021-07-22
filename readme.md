@@ -132,6 +132,13 @@ Project Setup
 ```shell
 heroku create aambayec-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
 git push heroku main
+
+# optional: heroku force push
+git push heroku main --force
+
+heroku config:set STRIPE_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+heroku open
 ```
 
 Linking Github to Heroku
