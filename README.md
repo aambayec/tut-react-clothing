@@ -123,3 +123,9 @@ git push heroku main
 
 Linking Github to Heroku
 <https://devcenter.heroku.com/articles/github-integration>
+
+## Graphql using Apollo
+
+```shell
+yarn add apollo-boost react-apollo graphql
+```
