@@ -8,6 +8,7 @@ import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import ShopPage from "./pages/shop/shop.component";
+import ContactPage from "./pages/contact/contact.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import { checkUserSession } from "./redux/user/user.actions";
 import { GlobalStyle } from "./global.styles";
@@ -24,6 +25,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Switch>
         <Route path="/shop" component={ShopPage} />
         <Route path="/checkout" component={CheckoutPage} />
+        <Route path="/contact" component={ContactPage} />
         <Route
           exact
           path="/signin"
