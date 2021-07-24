@@ -159,3 +159,30 @@ heroku buildpacks:remove https://github.com/mars/create-react-app-buildpack.git
 ```shell
 yarn add styled-components
 ```
+
+
+## React memo / PureComponent
+
+Used to memoize the components
+
+```javascript
+# for functional components
+export default React.memo(FuntionComponentNameHere);
+
+# for class based components
+class ComponentNameHere extends React.PureComponent {}
+```
+
+## Hooks useCallback and useMemo
+
+useCallback when we want to memoize a function
+useMemo when we want to memoize with the return value of the function, should use when function is computationaly expensive
+
+```javascript
+useCallback(() => myFunc(param1), [param1])
+# to use <div>{myFunc()}</div>
+
+useMemo(() => myFunc(param1), [param1])
+# to use <div>{myFunc}</div>
+
+```
