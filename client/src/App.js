@@ -22,7 +22,6 @@ const App = ({ checkUserSession, currentUser }) => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
         <Route path="/shop" component={ShopPage} />
         <Route path="/checkout" component={CheckoutPage} />
         <Route
@@ -32,6 +31,7 @@ const App = ({ checkUserSession, currentUser }) => {
             currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
           }
         />
+        <Route path="/" component={HomePage} />
       </Switch>
     </div>
   );
