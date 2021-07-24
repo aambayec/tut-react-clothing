@@ -128,6 +128,7 @@ git push heroku main --force
 
 heroku config:set STRIPE_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
 
+# to open the live site on browser
 heroku open
 ```
 
@@ -152,7 +153,6 @@ heroku buildpacks
 #remove
 heroku buildpacks:remove https://github.com/mars/create-react-app-buildpack.git
 ```
-
 
 ## Styled Components
 
@@ -185,4 +185,17 @@ useCallback(() => myFunc(param1), [param1])
 useMemo(() => myFunc(param1), [param1])
 # to use <div>{myFunc}</div>
 
+```
+
+## Production file compression (gzipping on heroku)
+
+```shell
+yarn add compression
+```
+
+In our nodejs server.js add
+
+```javascript
+const compression = require("compression");
+app.use(compression());
 ```
