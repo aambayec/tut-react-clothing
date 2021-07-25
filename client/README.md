@@ -78,6 +78,29 @@ E.g One package requires a specific version of babel-jest, add "resolutions" in 
 
 6. See code implementations in `src/firebase`.
 
+### Sample Firebase Security Rules
+
+```CEL
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+     allow get, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /collections/{collection} {
+     allow read;
+      allow write: if request.auth != null && request.auth.uid == "tk2jkexLP9dYSskHn4YiXlICOIz2"
+    }
+    
+    match /carts/{cart} {
+     allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow read, update: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+  }
+}
+```
+
 ## Redux
 
 ```shell
