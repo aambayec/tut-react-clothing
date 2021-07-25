@@ -199,3 +199,16 @@ In our nodejs server.js add
 const compression = require("compression");
 app.use(compression());
 ```
+
+## SSL/HTTPS for Nodejs
+
+```shell
+yarn add express-sslify
+```
+
+server.js
+
+```javascript
+const enforce = require("express-sslify");
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+```
