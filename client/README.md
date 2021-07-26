@@ -235,3 +235,33 @@ server.js
 const enforce = require("express-sslify");
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 ```
+
+## Testing
+
+React Version 17
+
+```shell
+yarn add --dev enzyme
+yarn add --dev @wojtekmaj/enzyme-adapter-react-17
+```
+
+React Version < 16
+
+```shell
+npm i --save-dev enzyme enzyme-adapter-react-16
+npm i --save-dev react-test-renderer
+npm i --save-dev enzyme-to-json
+npm i --save-dev redux-mock-store
+
+```
+
+Test Coverage
+
+```shell
+npm test
+
+# to fix issue of not showing all files without tests in coverage
+CI=true npm test -- --coverage --color --watch
+# or
+npm test -- --coverage --watchAll=false
+```
