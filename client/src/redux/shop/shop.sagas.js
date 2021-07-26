@@ -18,7 +18,7 @@ import {
 
 // function* is a js async generator function, works like async await.
 // it stops the code on every 'yield' when called next()
-function* fetchCollectionsAsync() {
+export function* fetchCollectionsAsync() {
   try {
     const collectionRef = firestore.collection("collections");
     const snapshot = yield collectionRef.get();
@@ -39,7 +39,7 @@ function* fetchCollectionsAsync() {
   }
 }
 
-function* fetchCollectionsStart() {
+export function* fetchCollectionsStart() {
   yield takeLatest(
     ShopActionTypes.FETCH_COLLECTIONS_START,
     fetchCollectionsAsync
